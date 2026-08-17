@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Liguagm HTML</title>
         <style>
-        h1{color:rgb(255, 0, 157);}
+
+        h1{color:rgb(117, 0, 146);}
+
         span{font-size: 1.5em;}
+
         section{
             border-top-color: black;
             border-top-style: solid;
@@ -14,20 +17,24 @@
 
             border-top: 2px dotted red;
             
-            border: 2px dotted red;
+            border: 2px dotted rgb(49, 0, 95);
 
-            background-color: rgb(100, 0, 0);
+            background-color: rgb(193, 178, 247);
         }
-        div{
-            backgroud-color:#88AABB;
+
+        div{ backgroud-color:#88AABB; }
+
+        table, td{ 
+            border: 1px solid black;
+            border-collapse: collapse;
         }
         
     </style>
     </head>
     <body>
-        <div>
+        <div draggable="true">
             <h1>Origem HTML</h1>
-            <p>liguagem de marcação criada por
+            <p dir="rtl">liguagem de marcação criada por
                 <strong><a href="https://www.w3schools.com">Tim
                         Bernes</a></strong>
                 em (1990).
@@ -36,22 +43,93 @@
             </p>
             <img src="./Img/Photo1.jpg" alt=" ">
         </div>
+
+        <hr>
+
         <section>
+            <h2>Arquitetura Cliente servidor da WEB</h2>
+            <p>As tecnologias fundamentais que compoem a WEB são: </p>
 
-        
-        <h2>Arquitetura Cliente servidor da WEB</h2>
-        <p>As tecnologias fundamentais que compoem a WEB são: </p>
+            <ul>
+                <li>Arquitetura Cliente Servidor</li>
+                <li><mark>HTTP</mark>- Hyper Text Transfer Protocol</li>
+                <li>HTML - <em>Hyper Text Markup Language</em><del> é uma
+                        linguagem de programação</del><sub>nota1</sub></li>
+                <li>Navegador Cliente</li>
+                <li>Servidor web</li>
+            </ul>
+            <img src="./Img/images.jpg">
+            <p>Ao longo dos anos a web evoluiu e novas tecnologias foram
+                incoporadas
+                como <span>CSS</span> e JavaScript</p>
+            <p>a=ax+bx<sup>2</sup>+c</p>
+        </section>
 
-        <ul>
-            <li>Arquitetura Cliente Servidor</li>
-            <li>HTTP - Hyper Text Transfer Protocol</li>
-            <li>HTML - Hyper Text Markup Language</li>
-            <li>Navegador Cliente</li>
-            <li>Servidor web</li>
-        </ul>
-        <img src="./Img/images.jpg">
-        <p>Ao longo dos anos a web evoluiu e novas tecnologias foram incoporadas
-            como <span>CSS</span> e JavaScript</p>
+        <section id="listas">
+            <p>O HTML possui listas não orenadas, ordenads e detalhadas, criadas
+                com as tags ul ol dl</p>
+
+            <p>Liata não ordenada</p>
+            <ul>
+                <li>pera</li>
+                <li>uva</li>
+                <li>maçã</li>
+            </ul>
+
+            <p>Lista ordenada</p>
+            <ol>
+                <li>pera</li>
+                <li>uva</li>
+                <li>maçã</li>
+            </ol>
+
+            <dl>
+                <dt>leite</dt>
+                <dd>bebida nutritica extraída de mamíferos.</dd>
+
+                <dt>café</dt>
+                <dd>bebida obtida com a torra e fervura de grão de café,
+                    essencial a vida
+                </dd>
+            </dl>
+        </section>
+
+        <section i="tabelas">
+            <p>
+                O HTML fornece suporte a tabelas por meio da tag table, e outras
+                tags, como tag definição de linha &lt tr &gt <i>table row</i>,
+                criação de celular com tag &lt td &gt <i>table data</i>
+            </p>
+
+            <table>
+                <caption>Churrasco finaleira</caption>
+                <tr>
+                    <td>indice</td><td>Categoria</td><td>nome</td><td>valor(R$)</td>
+                </tr>
+                <tr>
+                    <td>1</td><td rowspan="2">carnes</td><td>carne</td><td>50,00</td>
+                </tr>
+                <tr>
+                    <td>2</td><td>linguiça</td><td>50,00</td>
+                </tr>
+                <tr>
+                    <td>3</td><td>outros</td><td>carvão</td><td>30,00</td>
+                </tr>
+                <tr>
+                    <td>4</td><td rowspan="2">Bebidas</td><td>Água com gás</td><td>30,00</td>
+                </tr>
+                <tr>
+                    <td>5</td><td>Refrigerante</td><td>60,00</td>
+                </tr>
+                <tr>
+                    <td>6</td><td>outros</td></outro><td>Pão de alho</td><td>40,00</td>
+                </tr>
+                <tr>
+                    <td colspan="3" rowspan="1">Total</td>
+                
+                    <td>260,00</td>
+                </tr>
+            </table>
         </section>
     </body>
 </html>
