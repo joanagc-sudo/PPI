@@ -11,22 +11,16 @@
         span{font-size: 1.5em;}
 
         section{
-            border-top-color: black;
-            border-top-style: solid;
-            border-top-width: 2px;
-
             border-top: 2px dotted red;
-            
-            border: 2px dotted rgb(49, 0, 95);
-
             background-color: rgb(193, 178, 247);
         }
 
         div{ backgroud-color:#88AABB; }
 
-        table, td{ 
+        table#sepei, #sepei td, #sepei caption, #sepei th{ 
             border: 1px solid black;
             border-collapse: collapse;
+            background-color: rgba(254, 251, 255, 0.267);
         }
         
     </style>
@@ -130,6 +124,39 @@
                     <td>260,00</td>
                 </tr>
             </table>
+            <table id = "sepei">
+                <caption>SEPEI 2026</caption>
+                <tr><th>indice</th><th>nome</th><th>idade</th></tr>
+                <tr><td>1</td><td>Joana</td><td>18</td></tr>
+                <tr><td>2</td><td>Oliver</td><td>18</td></tr>
+                <tr><td>3</td><td>Kiara</td><td>17</td></tr>
+                <tr><td>4</td><td>Maria Eduarda</td><td>17</td></tr>
+                <tr><td>5</td><td>Heloísa</td><td>18</td></tr>
+                <tr><td colspan = "2">Total alunos</td><td>5</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h1>formulário</h1>
+            <p>As tags permitem entrada de dado</p>
+            <form action="">
+                <label for="">Nome: </label>
+                <input id="inputnome" type="text">
+
+                <label for="inputTelefone">Telefone:</label>
+                    <input id="inputTelefone" type="tel" pattern="^(\d{2}\)\s\d{4,5}-\d{4}$">
+                    <input type="submit" value="Enviar">
+            </form>
+
+            <form method="post">
+            <label for="usr">Usuário</label>
+            <input type = "text" name="usuario">
+
+            <label for = "Senha">Senha</label>
+            <input id="senha" type = "password" name="senha">
+
+            <input type = "submit">
+            </form>
         </section>
     </body>
 </html>
