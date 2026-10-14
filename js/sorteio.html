@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form">
+            <div class="inputs">
+                <label for="min">Mínimo</label>
+                <input type="number" id="min">
+            </div>
+
+            <div class="inputs">
+                <label for="max">Máximo</label>
+                <input type="number" id="max">
+            </div>
+        </div>
+
+        <button id="btnSortear">Sortear</button>
+        <h2 id="result">-</h2>
+    </div>
+
+    <script>
+        btnSortear = document.getElementById("btnSortear");
+        min = document.getElementById("min");
+        max = document.getElementById("max");
+        result = document.getElementById("result");
+
+        btnSortear.addEventListener("click", () => {
+            minimo = Number(min.value);
+            maximo = Number(max.value);
+
+            if (min.value === "" || max.value === "") {
+                result.innerHTML = "Preencha os dois campos!";
+                return;
+            }
+
+            if (minimo > maximo) {
+                result.innerHTML = "O mínimo deve ser menor que o máximo!";
+                return;
+            }
+
+            random = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            ) + minimo;
+
+            result.innerHTML = random;
+        });
+    </script>
+
+</body>
+</html>
