@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <button id="btnSortear">Sortear</button>
+        <h2 id="result">-</h2>
+    </div>
+
+    <script>
+        btnSortear = document.getElementById("btnSortear");
+        result = document.getElementById("result");
+
+        btnSortear.addEventListener("click", () => {
+            minimo = 0;
+            maximo = 255;
+
+            const container = document.querySelector(".container");
+            random1 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            random2 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            random3 = Math.floor(
+                Math.random() * (maximo - minimo + 1)
+            );
+            container.style.backgroundColor = `rgb(${random1}, ${random2}, ${random3})`;
+
+            result.innerHTML = "(" + random1 + "," + random2 + "," +random3+")";
+        });
+    </script>
+
+</body>
+</html>
